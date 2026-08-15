@@ -10,7 +10,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFFFFF;--panel:#FFFFFF;--panel2:#FFF5F5;--text:#171717;--muted:#666666;--blue:#D62828;--cyan:#E63939;--line:rgba(214,40,40,.15);--shadow:0 20px 60px rgba(0,0,0,.12);--radius:22px}
+/* Website ke dark/black text ko white karne ke liye */
+body,
+body *,
+h1, h2, h3, h4, h5, h6,
+p, span, a, li,
+label, button,
+input, textarea, select,
+.navbar, .logo, .nav,
+.section-title, .section-subtitle,
+.hero h1, .hero p,
+.about-text, .about-text p,
+.service-card h3, .service-card p,
+.card-title, .card-text,
+.content, .content small,
+strong, b, i, u,
+footer, footer p, footer a {
+    color: #ffffff !important;
+}
+
+/* Links bhi white */
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* Placeholder text white */
+input::placeholder,
+textarea::placeholder {
+    color: #ffffff !important;
+    opacity: 1;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#06101d,#091729 45%,#06101d);color:var(--text);line-height:1.6}
