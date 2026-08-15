@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07111f;--panel:#0d1b2e;--panel2:#10243b;--text:#f5f8ff;--muted:#a9b7ca;--blue:#35a7ff;--cyan:#5de0ff;--line:rgba(255,255,255,.09);--shadow:0 20px 60px rgba(0,0,0,.25);--radius:22px}
+:root{--bg:#07111F;--panel:#0D1B2A;--panel2:#13263D;--text:#F8FAFC;--muted:#A8B3C2;--blue:#2F80ED;--cyan:#38BDF8;--line:rgba(56,189,248,.12);--shadow:0 20px 60px rgba(0,0,0,.35);--radius:22px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#06101d,#091729 45%,#06101d);color:var(--text);line-height:1.6}
