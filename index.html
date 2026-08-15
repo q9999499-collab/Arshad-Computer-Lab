@@ -24,8 +24,36 @@ nav{display:flex;gap:22px;align-items:center}nav a{font-size:14px;color:#dce7f5;
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;font-weight:800;font-size:14px;border:1px solid var(--line);transition:.2s;cursor:pointer}
 .btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#03101c;border:none}.ghost{background:rgba(255,255,255,.05)}
 .menu{display:none;background:none;border:0;color:white;font-size:26px}
-.hero{padding:100px 0 75px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(53,167,255,.14);filter:blur(80px);right:-180px;top:-150px}
+.hero{
+    padding:100px 0 75px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,12,25,.96) 0%,
+            rgba(5,12,25,.82) 40%,
+            rgba(5,12,25,.45) 100%
+        ),
+        url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(53,167,255,.10);
+    filter:blur(80px);
+    right:-180px;
+    top:-150px;
+}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center;position:relative}
 .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(93,224,255,.09);border:1px solid rgba(93,224,255,.22);color:#a9efff;font-size:12px;font-weight:800;margin-bottom:20px}
 h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-2.5px;margin-bottom:20px}
