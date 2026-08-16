@@ -66,7 +66,9 @@ ul{list-style:none}
     <input id="search" type="search" placeholder="Search laptops, computers & accessories..." oninput="searchProducts()">
     <button onclick="searchProducts()">SEARCH</button>
   </div>
-  <div class="headbtn" onclick="showLogin()">👤 Login</div>
+ <button onclick="loginWithGoogle()">
+  Continue with Google
+</button>
   <div class="cart" onclick="openEasyPaisa()">💸 EasyPaisa</div>
 </header>
 
@@ -198,6 +200,19 @@ async function loginCustomer() {
 
   message.textContent = "Login successful!";
   alert("Login successful!");
+}
+  async function loginWithGoogle() {
+  const { error } = await supabaseClient.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin + window.location.pathname
+    }
+  });
+
+  if (error) {
+    console.error(error);
+    alert("Google login failed: " + error.message);
+  }
 }
 </script>
 </body>
