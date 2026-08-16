@@ -118,7 +118,18 @@ ul{list-style:none}
 
 <div class="modal" id="easyPaisaModal"><div class="modal-box"><span class="close" onclick="closeEasyPaisa()">×</span><h2>💸 EasyPaisa Payment</h2><p style="margin:12px 0">Pay through EasyPaisa and send your payment screenshot on WhatsApp.</p><div style="background:#f5f5f5;padding:15px;border-radius:8px;margin:15px 0"><b>EasyPaisa Number</b><br><span style="font-size:22px;color:#008000">0305 7938806</span></div><div id="selectedProduct" style="margin-bottom:12px"></div><a class="btn" style="width:100%;text-align:center;text-decoration:none" href="https://wa.me/923057938806?text=Assalam-o-Alaikum%2C%20I%20want%20to%20buy%20a%20product%20from%20Arshad%20Computer%20Lab.%20I%20will%20pay%20through%20EasyPaisa." target="_blank">Send Order on WhatsApp</a></div></div>
 <div class="modal" id="loginModal">
-<div class="modal-box"><span class="close" onclick="document.getElementById('loginModal').style.display='none'">×</span><h2>Login</h2><p style="margin-bottom:15px">Customer login can be connected to a database later.</p><input style="width:100%;padding:12px;margin-bottom:10px" placeholder="Mobile / Email"><button class="btn" style="width:100%" onclick="alert('Demo login')">Continue</button></div>
+  <div class="modal-box">
+    <span class="close" onclick="document.getElementById('loginModal').style.display='none'">×</span>
+    <h2>Customer Login</h2>
+
+    <input id="loginEmail" type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:10px">
+
+    <input id="loginPassword" type="password" placeholder="Password" style="width:100%;padding:12px;margin-bottom:10px">
+
+    <button class="btn" style="width:100%" onclick="loginCustomer()">Login</button>
+
+    <p id="loginMessage" style="margin-top:10px"></p>
+  </div>
 </div>
 
 <script>
@@ -160,6 +171,29 @@ const supabase = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+    async function loginCustomer() {
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+  const message = document.getElementById("loginMessage");
+
+  if (!email || !password) {
+    message.textContent = "Email aur password dono likho.";
+    return;
+  }
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email,
+    password: password
+  });
+
+  if (error) {
+    message.textContent = error.message;
+    return;
+  }
+
+  message.textContent = "Login successful!";
+  alert("Login successful!");
+}
 </script>
 </body>
 </html>
