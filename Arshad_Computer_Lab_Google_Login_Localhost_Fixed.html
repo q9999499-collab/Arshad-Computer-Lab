@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arshad Computer Lab | Laptops, Computers & Accessories</title>
+<meta name="description" content="Arshad Computer Lab - Buy laptops, computers and PC accessories online.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#222}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+.top{background:#f85606;color:#fff;font-size:13px;padding:7px 5%;text-align:right}
+.header{background:#f85606;color:#fff;padding:12px 5%;display:flex;align-items:center;gap:18px;position:sticky;top:0;z-index:20}
+.logo{font-size:25px;font-weight:800;white-space:nowrap}
+.search{display:flex;flex:1;max-width:650px}
+.search input{width:100%;border:0;padding:13px 15px;border-radius:5px 0 0 5px;outline:0}
+.search button{border:0;background:#ffe1d2;color:#f85606;padding:0 20px;border-radius:0 5px 5px 0;cursor:pointer;font-weight:bold}
+.headbtn{cursor:pointer;font-weight:bold;white-space:nowrap}
+.cart{font-size:25px;cursor:pointer;position:relative}
+.badge{position:absolute;top:-8px;right:-9px;background:#fff;color:#f85606;border-radius:50%;font-size:11px;padding:3px 6px}
+.nav{background:#fff;padding:12px 5%;display:flex;gap:24px;box-shadow:0 2px 5px #ddd;overflow:auto}
+.nav a{font-weight:600;white-space:nowrap}
+.container{width:90%;max-width:1200px;margin:20px auto}
+.hero{background:linear-gradient(120deg,#172554,#0f766e);min-height:280px;border-radius:10px;color:#fff;display:flex;align-items:center;padding:35px;overflow:hidden}
+.hero-text{max-width:600px}
+.hero h1{font-size:42px;margin-bottom:12px}
+.hero p{font-size:18px;line-height:1.5;margin-bottom:20px}
+.btn{display:inline-block;background:#f85606;color:white;padding:12px 22px;border:0;border-radius:5px;cursor:pointer;font-weight:bold}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px}
+.section-title h2{font-size:24px}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cat{background:#fff;border-radius:8px;padding:20px 10px;text-align:center;box-shadow:0 1px 4px #ddd;cursor:pointer}
+.cat-icon{font-size:35px;margin-bottom:8px}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 5px #ddd;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 4px 12px #ccc}
+.pic{height:190px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:70px}
+.pic img{width:100%;height:100%;object-fit:cover}.fallback-icon{font-size:70px}
+.info{padding:12px}
+.info h3{font-size:15px;line-height:1.35;height:40px;overflow:hidden}
+.price{color:#f85606;font-size:20px;font-weight:700;margin:9px 0 4px}
+.old{text-decoration:line-through;color:#999;font-size:12px}
+.rating{font-size:12px;color:#777;margin-bottom:10px}
+.buy{width:100%;background:#f85606;color:#fff;border:0;padding:10px;border-radius:4px;cursor:pointer}
+.banner{margin:30px 0;background:#fff;padding:25px;border-radius:8px;display:flex;justify-content:space-between;align-items:center}
+.footer{background:#17202a;color:#ddd;margin-top:40px;padding:35px 5%}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+.footer h3{color:#fff;margin-bottom:12px}.footer p,.footer li{font-size:14px;line-height:1.8}
+ul{list-style:none}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;align-items:center;justify-content:center}
+.modal-box{background:#fff;width:min(500px,90%);border-radius:10px;padding:25px}
+.modal-box h2{margin-bottom:15px}.close{float:right;cursor:pointer;font-size:24px}
+.cart-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #ddd}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:32px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.header{flex-wrap:wrap}.logo{width:100%}.search{order:3;max-width:none;width:100%}.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.hero{min-height:240px;padding:25px}.hero h1{font-size:27px}.container{width:94%}.nav{padding-left:3%}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top">Welcome to Arshad Computer Lab | Renala Khurd</div>
+
+<header class="header">
+  <div class="logo">💻 Arshad Computer Lab</div>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search laptops, computers & accessories..." oninput="searchProducts()">
+    <button onclick="searchProducts()">SEARCH</button>
+  </div>
+ <button onclick="loginWithGoogle()">
+  Continue with Google
+</button>
+  <div class="cart" onclick="openEasyPaisa()">💸 EasyPaisa</div>
+</header>
+
+<nav class="nav">
+  <a href="#home">Home</a><a href="#laptops">Laptops</a><a href="#computers">Computers</a>
+  <a href="#accessories">Accessories</a><a href="#deals">Deals</a><a href="#contact">Contact</a>
+</nav>
+
+<main class="container" id="home">
+<section class="hero">
+  <div class="hero-text">
+    <h1>Tech You Can Trust</h1>
+    <p>Shop laptops, computers and PC accessories from Arshad Computer Lab. Add your own product pictures and prices anytime.</p>
+    <a class="btn" href="#products">Shop Now</a>
+  </div>
+</section>
+
+<div class="section-title"><h2>Categories</h2></div>
+<section class="categories">
+  <div class="cat" onclick="filterCategory('Laptop')"><div class="cat-icon">💻</div>Laptops</div>
+  <div class="cat" onclick="filterCategory('Desktop')"><div class="cat-icon">🖥️</div>Computers</div>
+  <div class="cat" onclick="filterCategory('Keyboard')"><div class="cat-icon">⌨️</div>Keyboards</div>
+  <div class="cat" onclick="filterCategory('Mouse')"><div class="cat-icon">🖱️</div>Mouse</div>
+  <div class="cat" onclick="filterCategory('Monitor')"><div class="cat-icon">🖥️</div>Monitors</div>
+  <div class="cat" onclick="filterCategory('Accessory')"><div class="cat-icon">🔌</div>Accessories</div>
+</section>
+
+<div class="section-title" id="products"><h2>Featured Products</h2><button class="btn" onclick="showAll()">View All</button></div>
+<section class="products" id="productGrid"></section>
+
+<section class="banner" id="deals">
+  <div><h2>Need a laptop or PC?</h2><p>Contact Arshad Computer Lab for latest prices and availability.</p></div>
+  <a class="btn" href="tel:03057938806">Call Now</a>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+<div class="footer-grid">
+<div><h3>Arshad Computer Lab</h3><p>Laptops • Computers • Accessories • Repair • Upgrades</p><p>Renala Khurd, Punjab, Pakistan</p></div>
+<div><h3>Shop</h3><ul><li>Laptops</li><li>Computers</li><li>Accessories</li><li>Deals</li></ul></div>
+<div><h3>Contact</h3><ul><li>📞 03136246828</li><li>📍 Renala Khurd</li><li>💬 WhatsApp</li></ul></div>
+<div><h3>Important</h3><p>This is a static shopping website. Orders can be connected to WhatsApp or a payment system later.</p></div>
+</div>
+</footer>
+
+<div class="modal" id="cartModal">
+<div class="modal-box"><span class="close" onclick="closeCart()">×</span><h2>Your Cart</h2><div id="cartItems"></div><h3 id="total" style="margin-top:15px"></h3><button class="btn" style="margin-top:15px;width:100%" onclick="checkout()">Order on WhatsApp</button></div>
+</div>
+
+<div class="modal" id="easyPaisaModal"><div class="modal-box"><span class="close" onclick="closeEasyPaisa()">×</span><h2>💸 EasyPaisa Payment</h2><p style="margin:12px 0">Pay through EasyPaisa and send your payment screenshot on WhatsApp.</p><div style="background:#f5f5f5;padding:15px;border-radius:8px;margin:15px 0"><b>EasyPaisa Number</b><br><span style="font-size:22px;color:#008000">0305 7938806</span></div><div id="selectedProduct" style="margin-bottom:12px"></div><a class="btn" style="width:100%;text-align:center;text-decoration:none" href="https://wa.me/923057938806?text=Assalam-o-Alaikum%2C%20I%20want%20to%20buy%20a%20product%20from%20Arshad%20Computer%20Lab.%20I%20will%20pay%20through%20EasyPaisa." target="_blank">Send Order on WhatsApp</a></div></div>
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <span class="close" onclick="document.getElementById('loginModal').style.display='none'">×</span>
+    <h2>Customer Login</h2>
+
+    <input id="loginEmail" type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:10px">
+
+    <input id="loginPassword" type="password" placeholder="Password" style="width:100%;padding:12px;margin-bottom:10px">
+
+    <button class="btn" style="width:100%" onclick="loginCustomer()">Login</button>
+
+    <p id="loginMessage" style="margin-top:10px"></p>
+  </div>
+</div>
+
+<script>
+let products = [];
+let cart = [];
+
+async function loadProducts() {
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px">Products load ho rahe hain...</p>';
+
+  const { data, error } = await supabaseClient
+    .from("Products")
+    .select("id,name,price,old_price,category,image_url,description,stock,featured")
+    .order("id", { ascending: true });
+
+  if (error) {
+    console.error("Supabase Products error:", error);
+    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:#c00">Products load nahi ho sake. Supabase table/RLS check karein.</p>';
+    return;
+  }
+
+  products = (data || []).map(p => ({
+    ...p,
+    price: Number(p.price || 0),
+    old: Number(p.old_price || 0),
+    cat: p.category || "Accessory",
+    icon: "💻"
+  }));
+
+  render(products);
+}
+let cart=[];
+function money(n){return "Rs. "+n.toLocaleString("en-PK")}
+function render(list=products){
+  const grid = document.getElementById("productGrid");
+
+  if (!list.length) {
+    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px">No products found.</p>';
+    return;
+  }
+
+  grid.innerHTML = list.map(p => {
+    const image = p.image_url
+      ? `<img src="${p.image_url}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.fallback-icon').style.display='block'">`
+      : "";
+
+    const stockText = p.stock !== null && p.stock !== undefined
+      ? `Stock: ${p.stock}`
+      : "Available";
+
+    return `<article class="card">
+      <div class="pic">
+        ${image}
+        <span class="fallback-icon" style="${image ? 'display:none' : ''}">${p.icon}</span>
+      </div>
+      <div class="info">
+        <h3>${escapeHtml(p.name)}</h3>
+        ${p.description ? `<div style="font-size:12px;color:#666;margin-top:5px;max-height:34px;overflow:hidden">${escapeHtml(p.description)}</div>` : ""}
+        <div class="price">${money(p.price)}</div>
+        ${p.old ? `<div class="old">${money(p.old)}</div>` : ""}
+        <div class="rating">⭐ 4.8 | ${escapeHtml(p.cat)} | ${stockText}</div>
+        <button class="buy" onclick="openEasyPaisaById(${p.id})">Buy with EasyPaisa</button>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  }[ch]));
+}
+
+function openEasyPaisaById(id){
+  const product = products.find(p => Number(p.id) === Number(id));
+  openEasyPaisa(product);
+}
+function addCart(i){cart.push(products[i]);document.getElementById("count").textContent=cart.length;alert(products[i].name+" added to cart")}
+function openCart(){document.getElementById("cartModal").style.display="flex";let box=document.getElementById("cartItems");if(!cart.length){box.innerHTML="<p>Your cart is empty.</p>";document.getElementById("total").textContent="";return}box.innerHTML=cart.map((p,i)=>`<div class="cart-row"><span>${p.name}</span><b>${money(p.price)}</b></div>`).join("");document.getElementById("total").textContent="Total: "+money(cart.reduce((a,p)=>a+p.price,0))}
+function closeCart(){document.getElementById("cartModal").style.display="none"}
+function checkout(){if(!cart.length)return alert("Cart is empty");let text="Assalam-o-Alaikum, I want to order:%0A"+cart.map(p=>"- "+p.name+" ("+money(p.price)+")").join("%0A");window.open("https://wa.me/923057938806?text="+text,"_blank")}
+function openEasyPaisa(product){document.getElementById("easyPaisaModal").style.display="flex";const box=document.getElementById("selectedProduct");if(product){box.innerHTML="<b>Selected Product:</b> "+product.name+"<br><b>Price:</b> "+money(product.price)}else{box.innerHTML="<b>How to order:</b> Pay to 0305 7938806, then send the payment screenshot on WhatsApp."}} function closeEasyPaisa(){document.getElementById("easyPaisaModal").style.display="none"}
+function showLogin(){document.getElementById("loginModal").style.display="flex"}
+function searchProducts(){let q=document.getElementById("search").value.toLowerCase();render(products.filter(p=>(p.name+" "+p.cat).toLowerCase().includes(q)))}
+function filterCategory(c){render(products.filter(p=>p.cat===c));document.getElementById("products").scrollIntoView({behavior:"smooth"})}
+function showAll(){document.getElementById("search").value="";render()}
+loadProducts();
+</script> 
+  
+const SUPABASE_URL = "https://oksovldnrfpilxxisykb.supabase.co";
+const SUPABASE_KEY = "sb_publishable_j1ONBh8-o3xsta4qFgzOlg_jKtIXAlZ";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+async function loginCustomer() {
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+  const message = document.getElementById("loginMessage");
+
+  if (!email || !password) {
+    message.textContent = "Email aur password dono likho.";
+    return;
+  }
+
+  message.textContent = "Login ho raha hai...";
+
+  const { data, error } =
+    await supabaseClient.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
+
+  if (error) {
+    message.textContent = "Login failed: " + error.message;
+    return;
+  }
+
+  message.textContent = "Login successful!";
+  alert("Login successful!");
+}
+  async function loginWithGoogle() {
+  const button = document.querySelector('button[onclick="loginWithGoogle()"]');
+  const originalText = button ? button.textContent : "";
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Signing in...";
+  }
+
+  try {
+    // Use the current page as the OAuth destination.
+    // This must also be added to Supabase Authentication > URL Configuration > Redirect URLs.
+    const redirectTo = "https://q9999499-collab.github.io/Arshad-Computer-Lab/";
+
+    const { data, error } = await supabaseClient.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo,
+        queryParams: {
+          access_type: "offline",
+          prompt: "select_account"
+        }
+      }
+    });
+
+    if (error) {
+      console.error("Google OAuth error:", error);
+      alert("Google login error: " + error.message);
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+      return;
+    }
+
+    // Supabase handles the browser redirect automatically.
+    // No manual Google callback page is needed for this static site.
+    if (!data || !data.url) {
+      throw new Error("Google login URL generate nahi hui.");
+    }
+  } catch (err) {
+    console.error("Google login exception:", err);
+    alert("Google login error: " + (err?.message || err));
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalText;
+    }
+  }
+}
+
+// Keep the login session available after returning from Google.
+supabaseClient.auth.onAuthStateChange((event, session) => {
+  if (event === "SIGNED_IN" && session?.user) {
+    console.log("Google login successful:", session.user.email);
+  }
+});
+loadProducts();
+</script>
+</body>
+</html>
