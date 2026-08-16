@@ -152,5 +152,14 @@ function showAll(){document.getElementById("search").value="";render()}
 render();
 </script> 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+const SUPABASE_URL = "https://oksovldnrfpilxxisykb.supabase.co";
+const SUPABASE_KEY = "sb_publishable_j1ONBh8-o3xsta4qFgzOlg_jKtIXAlZ";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+</script>
 </body>
 </html>
