@@ -150,6 +150,7 @@ function searchProducts(){let q=document.getElementById("search").value.toLowerC
 function filterCategory(c){render(products.filter(p=>p.cat===c));document.getElementById("products").scrollIntoView({behavior:"smooth"})}
 function showAll(){document.getElementById("search").value="";render()}
 render();
-</script>
+</script> 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 </html>
