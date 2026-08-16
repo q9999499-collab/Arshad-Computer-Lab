@@ -163,16 +163,18 @@ function showAll(){document.getElementById("search").value="";render()}
 render();
 </script> 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-const SUPABASE_URL = "https://oksovldnrfpilxxisykb.supabase.co";
-const SUPABASE_KEY = "sb_publishable_j1ONBh8-o3xsta4qFgzOlg_jKtIXAlZ";
 
-const supabase = window.supabase.createClient(
+<script>
+const SUPABASE_URL = "https://oksolvdnrfpilxxisyikb.supabase.co";
+const SUPABASE_KEY = "sb_publishable_j10NBh8-o3xsta4qFqz0lg_jKtXIA1z";
+
+const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
-    async function loginCustomer() {
-  const email = document.getElementById("loginEmail").value;
+
+async function loginCustomer() {
+  const email = document.getElementById("loginEmail").value.trim();
   const password = document.getElementById("loginPassword").value;
   const message = document.getElementById("loginMessage");
 
@@ -181,13 +183,16 @@ const supabase = window.supabase.createClient(
     return;
   }
 
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email: email,
-    password: password
-  });
+  message.textContent = "Login ho raha hai...";
+
+  const { data, error } =
+    await supabaseClient.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
 
   if (error) {
-    message.textContent = error.message;
+    message.textContent = "Login failed: " + error.message;
     return;
   }
 
