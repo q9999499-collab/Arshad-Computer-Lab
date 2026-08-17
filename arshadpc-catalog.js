@@ -1,20 +1,6 @@
 (()=>{
 if(window.__ACL_CATALOG_BOOTED)return;window.__ACL_CATALOG_BOOTED=true;
-function load(){
-  const hero=document.querySelector('.hero');
-  if(hero){
-    hero.innerHTML='';
-    hero.style.backgroundImage="url('./website-banner.jpg')";
-    hero.style.backgroundSize='cover';
-    hero.style.backgroundPosition='center';
-    hero.style.backgroundRepeat='no-repeat';
-    hero.style.minHeight='420px';
-    hero.style.padding='0';
-    hero.style.cursor='pointer';
-    hero.setAttribute('aria-label','Arshad Computer Lab premium laptop banner');
-    hero.onclick=()=>document.getElementById('shop')?.scrollIntoView({behavior:'smooth'});
-  }
-  if(window.__ACL_STOCK_LOADER)return;window.__ACL_STOCK_LOADER=true;const s=document.createElement('script');s.src='./creative-stock.js';s.onload=()=>window.__aclStock&&window.renderLaptops&&window.renderLaptops();document.body.appendChild(s)
-}
+function applyHero(){const hero=document.querySelector('.hero');if(!hero)return false;hero.innerHTML='';hero.style.setProperty('background-image',"url('./website-banner.jpg?v=20260817')",'important');hero.style.setProperty('background-size','cover','important');hero.style.setProperty('background-position','center','important');hero.style.setProperty('background-repeat','no-repeat','important');hero.style.setProperty('min-height','420px','important');hero.style.setProperty('padding','0','important');hero.style.cursor='pointer';hero.setAttribute('aria-label','Arshad Computer Lab premium laptop banner');hero.onclick=()=>document.getElementById('shop')?.scrollIntoView({behavior:'smooth'});return true}
+function load(){applyHero();if(window.__ACL_STOCK_LOADER)return;window.__ACL_STOCK_LOADER=true;const s=document.createElement('script');s.src='./creative-stock.js?v=20260817';s.onload=()=>{applyHero();window.__aclStock&&window.renderLaptops&&window.renderLaptops()};document.body.appendChild(s)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
 })();
