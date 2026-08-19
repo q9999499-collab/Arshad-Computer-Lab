@@ -1,23 +1,23 @@
 (()=>{
 if(window.__ACL_CATALOG_BOOTED)return;window.__ACL_CATALOG_BOOTED=true;
 const BANNERS=[
-  './ChatGPT%20Image%20Aug%2017,%202026,%2003_53_21%20PM.png?v=20260820',
-  './ChatGPT%20Image%20Aug%2020,%202026,%2001_06_01%20AM.png?v=20260820',
-  './ChatGPT%20Image%20Aug%2020,%202026,%2001_10_32%20AM.png?v=20260820'
+  './ChatGPT%20Image%20Aug%2017,%202026,%2003_53_21%20PM.png?v=20260820full',
+  './ChatGPT%20Image%20Aug%2020,%202026,%2001_06_01%20AM.png?v=20260820full',
+  './ChatGPT%20Image%20Aug%2020,%202026,%2001_10_32%20AM.png?v=20260820full'
 ];
 function applyHero(){
  const hero=document.querySelector('.hero'); if(!hero)return false;
  hero.innerHTML=`<div class="acl-hero-slider" aria-label="Arshad Computer Lab banners">${BANNERS.map((src,i)=>`<a class="acl-slide ${i===0?'active':''}" href="#shop" aria-label="Shop Arshad Computer Lab"><img src="${src}" alt="Arshad Computer Lab laptop banner" loading="${i===0?'eager':'lazy'}"></a>`).join('')}<button class="acl-prev" type="button" aria-label="Previous banner">‹</button><button class="acl-next" type="button" aria-label="Next banner">›</button><div class="acl-dots">${BANNERS.map((_,i)=>`<button type="button" class="acl-dot ${i===0?'active':''}" data-slide="${i}" aria-label="Banner ${i+1}"></button>`).join('')}</div></div>`;
  const style=document.createElement('style');style.textContent=`
  .hero{margin:0 0 28px!important;border-radius:0!important;min-height:0!important;background:#fff!important;box-shadow:none!important;overflow:hidden!important;width:100vw!important;margin-left:calc(50% - 50vw)!important;line-height:0!important}
- .acl-hero-slider{position:relative;width:100%;height:clamp(260px,31vw,500px);background:#f5f5f5;overflow:hidden}
- .acl-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;display:block}
+ .acl-hero-slider{position:relative;width:100%;height:clamp(260px,31vw,500px);background:#fff;overflow:hidden}
+ .acl-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;display:flex;align-items:center;justify-content:center;background:#fff}
  .acl-slide.active{opacity:1;visibility:visible;z-index:1}
- .acl-slide img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+ .acl-slide img{width:100%;height:100%;display:block;object-fit:contain;object-position:center;background:#fff}
  .acl-prev,.acl-next{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:rgba(0,0,0,.38);color:#fff;font-size:34px;line-height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.85}
  .acl-prev{left:18px}.acl-next{right:18px}.acl-prev:hover,.acl-next:hover{background:rgba(0,0,0,.62)}
  .acl-dots{position:absolute;z-index:3;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:7px}
- .acl-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.65);cursor:pointer}.acl-dot.active{width:24px;border-radius:8px;background:#fff}
+ .acl-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(0,0,0,.35);cursor:pointer}.acl-dot.active{width:24px;border-radius:8px;background:#1463d9}
  @media(max-width:700px){.acl-hero-slider{height:56vw;min-height:210px}.acl-prev,.acl-next{width:34px;height:34px;font-size:27px}.acl-prev{left:10px}.acl-next{right:10px}.acl-dots{bottom:10px}}
  `;document.head.appendChild(style);
  const slides=[...hero.querySelectorAll('.acl-slide')],dots=[...hero.querySelectorAll('.acl-dot')];let index=0,timer;
