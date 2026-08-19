@@ -1,0 +1,10 @@
+name = "arshad-computer-lab-easypaisa"
+main = "src/index.js"
+compatibility_date = "2026-08-19"
+
+[vars]
+# Set the production values only through Cloudflare secrets/dashboard.
+# EASYPAISA_STORE_ID is required.
+# EASYPAISA_HASH_KEY is required.
+# EASYPAISA_API_URL is required.
+# EASYPAISA_RETURN_URL is required.
