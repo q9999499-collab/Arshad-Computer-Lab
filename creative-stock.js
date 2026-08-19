@@ -1,59 +1,10 @@
 (()=>{
-const WA='923136246828',EP='03249070454',EPN='Muhammad Huzaifa';
+const WA='923136246828';
 const stock=[
-['HP 840 G7','I5','10TH','8 GB','256 GB',38,'hp-840-g7.jpg'],
-['HP 840 G6','I7','8TH','8 GB','256 GB',1,'hp-840-g6.jpg'],
-['HP 440 G6','I7','8TH','8 GB','256 GB',2,'hp-440-g6.jpg'],
-['HP 450 G6','I5','8TH','8 GB','256 GB',1,'hp-450-g6.jpg'],
-['HP 840 G3','I7','6TH','8 GB','256 GB',1,'hp-840-g3.jpg'],
-['HP ZBOOK 14','I5','4TH','4 GB','500 GB',1,'hp-zbook-14.jpg'],
-['DELL 7400 2 IN 1','I5','8TH','8 GB','256 GB',1,'dell-7400-2-in-1.jpg'],
-['DELL 5290 2IN1','I5','8TH','8 GB','256 GB',2,'dell-5290-2in1.jpg'],
-['DELL 3390 2 IN 1','I5','8TH','8 GB','256 GB',4,'dell-3390-2-in-1.jpg'],
-['DELL 3310 2 IN 1','I5','8TH','8 GB','256 GB',1,'dell-3310-2-in-1.jpg'],
-['DELL 7285 2IN1','I5','7TH','8 GB','256 GB',2,'dell-7285-2in1.jpg'],
-['DELL 5280 2IN1','I5','7TH','8 GB','256 GB',1,'dell-5280-2in1.jpg'],
-['DELL 5490','I5','8TH','8 GB','256 GB',6,'dell-5490.jpg'],
-['DELL 7390','I5','8TH','8 GB','256 GB',2,'dell-7390.jpg'],
-['DELL 5300','I5','8TH','8 GB','256 GB',8,'dell-5300.jpg'],
-['DELL 3400','I5','8TH','8 GB','256 GB',7,'dell-3400.jpg'],
-['DELL 3530','I5','8TH','8 GB','256 GB',1,'dell-3530.jpg'],
-['DELL 5480','I5','7TH / 6TH','8 GB','256 GB',12,'dell-5480.jpg'],
-['DELL 3380','I5','7TH','8 GB','256 GB',1,'dell-3380.jpg'],
-['DELL 7470','I7','6TH','8 GB','256 GB',1,'dell-7470.jpg'],
-['DELL 7440','I5','4TH','4 GB','500 GB',3,'dell-7440.jpg'],
-['DELL 7240','I5','4TH','4 GB','500 GB',1,'dell-7240.jpg'],
-['DELL E6440','I5','4TH','4 GB','500 GB',1,'dell-e6440.jpg'],
-['LENOVO P50','XEON','E3','8 GB','256 GB',2,'lenovo-p50.jpg'],
-['LENOVO YOGA C740','I5','10TH','8 GB','256 GB',6,'lenovo-yoga-c740.jpg'],
-['LENOVO X390 YOGA','I7','8TH','8 GB','256 GB',2,'lenovo-x390-yoga.jpg'],
-['LENOVO P52','I7','8TH','8 GB','256 GB',2,'lenovo-p52.jpg'],
-['LENOVO T480S','I5','8TH','8 GB','256 GB',5,'lenovo-t480s.jpg'],
-['LENOVO YOGA L380/L390','I5','8TH','8 GB','256 GB',5,'lenovo-yoga-l380-l390.jpg'],
-['LENOVO T490','I5','8TH','8 GB','256 GB',1,'lenovo-t490.jpg'],
-['LENOVO X280 TOUCH','I5','8TH','8 GB','256 GB',2,'lenovo-x280-touch.jpg'],
-['LENOVO L480','I5','8TH','8 GB','256 GB',1,'lenovo-l480.jpg'],
-['LENOVO L580','I5','8TH','8 GB','256 GB',4,'lenovo-l580.jpg'],
-['LENOVO L370 2in1','I5','7TH','8 GB','256 GB',1,'lenovo-l370-2in1.jpg'],
-['LENOVO T470','I5','7TH / 6TH','8 GB','256 GB',4,'lenovo-t470.jpg'],
-['LENOVO X270','I5','7TH','8 GB','256 GB',7,'lenovo-x270.jpg'],
-['LENOVO E570','I5','7TH','8 GB','256 GB',3,'lenovo-e570.jpg'],
-['LENOVO E560','I5','6TH','8 GB','256 GB',1,'lenovo-e560.jpg'],
-['LENOVO X260','I5','6TH','8 GB','256 GB',2,'lenovo-x260.jpg'],
-['LENOVO T460S','I5','6TH','8 GB','256 GB',1,'lenovo-t460s.jpg'],
-['LENOVO X250','I5','5TH','4 GB','500 GB',3,'lenovo-x250.jpg'],
-['LENOVO T450','I5','5TH','4 GB','500 GB',1,'lenovo-t450.jpg'],
-['LENOVO T550','I5','5TH','4 GB','500 GB',1,'lenovo-t550.jpg'],
-['LENOVO YOGA 12','I5','4TH','4 GB','500 GB',5,'lenovo-yoga-12.jpg'],
-['LENOVO T440P','I5','4TH','4 GB','500 GB',1,'lenovo-t440p.jpg'],
-['TOSHIBA Z30-C','I5','6TH','8 GB','256 GB',1,'toshiba-z30-c.jpg'],
-['MIX 6TH TO 10TH GEN','MIX','MIX','8 GB','256 GB',11,'laptop-placeholder.jpg'],
-['MIX 2ND TO 5TH GEN','MIX','MIX','4 GB','500 GB',49,'laptop-placeholder.jpg'],
-['FUJITSU','MIX','4TH','5 GB','500 GB',5,'laptop-placeholder.jpg']
+['HP 840 G7','I5','10TH','8 GB','256 GB',38,'hp-840-g7.jpg'],['HP 840 G6','I7','8TH','8 GB','256 GB',1,'hp-840-g6.jpg'],['HP 440 G6','I7','8TH','8 GB','256 GB',2,'hp-440-g6.jpg'],['HP 450 G6','I5','8TH','8 GB','256 GB',1,'hp-450-g6.jpg'],['HP 840 G3','I7','6TH','8 GB','256 GB',1,'hp-840-g3.jpg'],['HP ZBOOK 14','I5','4TH','4 GB','500 GB',1,'hp-zbook-14.jpg'],['DELL 7400 2 IN 1','I5','8TH','8 GB','256 GB',1,'dell-7400-2-in-1.jpg'],['DELL 5290 2IN1','I5','8TH','8 GB','256 GB',2,'dell-5290-2in1.jpg'],['DELL 3390 2 IN 1','I5','8TH','8 GB','256 GB',4,'dell-3390-2-in-1.jpg'],['DELL 3310 2 IN 1','I5','8TH','8 GB','256 GB',1,'dell-3310-2-in-1.jpg'],['DELL 7285 2IN1','I5','7TH','8 GB','256 GB',2,'dell-7285-2in1.jpg'],['DELL 5280 2IN1','I5','7TH','8 GB','256 GB',1,'dell-5280-2in1.jpg'],['DELL 5490','I5','8TH','8 GB','256 GB',6,'dell-5490.jpg'],['DELL 7390','I5','8TH','8 GB','256 GB',2,'dell-7390.jpg'],['DELL 5300','I5','8TH','8 GB','256 GB',8,'dell-5300.jpg'],['DELL 3400','I5','8TH','8 GB','256 GB',7,'dell-3400.jpg'],['DELL 3530','I5','8TH','8 GB','256 GB',1,'dell-3530.jpg'],['DELL 5480','I5','7TH / 6TH','8 GB','256 GB',12,'dell-5480.jpg'],['DELL 3380','I5','7TH','8 GB','256 GB',1,'dell-3380.jpg'],['DELL 7470','I7','6TH','8 GB','256 GB',1,'dell-7470.jpg'],['DELL 7440','I5','4TH','4 GB','500 GB',3,'dell-7440.jpg'],['DELL 7240','I5','4TH','4 GB','500 GB',1,'dell-7240.jpg'],['DELL E6440','I5','4TH','4 GB','500 GB',1,'dell-e6440.jpg'],['LENOVO P50','XEON','E3','8 GB','256 GB',2,'lenovo-p50.jpg'],['LENOVO YOGA C740','I5','10TH','8 GB','256 GB',6,'lenovo-yoga-c740.jpg'],['LENOVO X390 YOGA','I7','8TH','8 GB','256 GB',2,'lenovo-x390-yoga.jpg'],['LENOVO P52','I7','8TH','8 GB','256 GB',2,'lenovo-p52.jpg'],['LENOVO T480S','I5','8TH','8 GB','256 GB',5,'lenovo-t480s.jpg'],['LENOVO YOGA L380/L390','I5','8TH','8 GB','256 GB',5,'lenovo-yoga-l380-l390.jpg'],['LENOVO T490','I5','8TH','8 GB','256 GB',1,'lenovo-t490.jpg'],['LENOVO X280 TOUCH','I5','8TH','8 GB','256 GB',2,'lenovo-x280-touch.jpg'],['LENOVO L480','I5','8TH','8 GB','256 GB',1,'lenovo-l480.jpg'],['LENOVO L580','I5','8TH','8 GB','256 GB',4,'lenovo-l580.jpg'],['LENOVO L370 2in1','I5','7TH','8 GB','256 GB',1,'lenovo-l370-2in1.jpg'],['LENOVO T470','I5','7TH / 6TH','8 GB','256 GB',4,'lenovo-t470.jpg'],['LENOVO X270','I5','7TH','8 GB','256 GB',7,'lenovo-x270.jpg'],['LENOVO E570','I5','7TH','8 GB','256 GB',3,'lenovo-e570.jpg'],['LENOVO E560','I5','6TH','8 GB','256 GB',1,'lenovo-e560.jpg'],['LENOVO X260','I5','6TH','8 GB','256 GB',2,'lenovo-x260.jpg'],['LENOVO T460S','I5','6TH','8 GB','256 GB',1,'lenovo-t460s.jpg'],['LENOVO X250','I5','5TH','4 GB','500 GB',3,'lenovo-x250.jpg'],['LENOVO T450','I5','5TH','4 GB','500 GB',1,'lenovo-t450.jpg'],['LENOVO T550','I5','5TH','4 GB','500 GB',1,'lenovo-t550.jpg'],['LENOVO YOGA 12','I5','4TH','4 GB','500 GB',5,'lenovo-yoga-12.jpg'],['LENOVO T440P','I5','4TH','4 GB','500 GB',1,'lenovo-t440p.jpg'],['TOSHIBA Z30-C','I5','6TH','8 GB','256 GB',1,'toshiba-z30-c.jpg'],['MIX 6TH TO 10TH GEN','MIX','MIX','8 GB','256 GB',11,'laptop-placeholder.jpg'],['MIX 2ND TO 5TH GEN','MIX','MIX','4 GB','500 GB',49,'laptop-placeholder.jpg'],['FUJITSU','MIX','4TH','5 GB','500 GB',5,'laptop-placeholder.jpg']
 ];
-const money=n=>'Rs. '+n.toLocaleString('en-PK');
-const wa=t=>window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener');
-function render(){const grid=document.getElementById('laptopGrid');if(!grid)return;const q=(document.getElementById('search')?.value||'').toLowerCase();const active=window.__aclBrand||'All';const arr=stock.filter(x=>(active==='All'||x[0].toUpperCase().includes(active.toUpperCase())||x[1].toLowerCase().includes(active.toLowerCase())||x[2].toLowerCase().includes(active.toLowerCase()))&&(!q||x.join(' ').toLowerCase().includes(q)));grid.innerHTML=arr.map(x=>`<article class="card"><div class="pic"><img src="${x[6]}" alt="${x[0]}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<span style="font-size:52px">💻</span>'"></div><div class="info"><div class="name">${x[0]}</div><div class="spec">Processor: <b>${x[1]}</b> • Gen: <b>${x[2]}</b> • Memory: <b>${x[3]}</b> • Storage: <b>${x[4]}</b></div><div class="price">Contact for Price</div><div class="stock">Available Quantity: ${x[5]}</div><div class="buttons"><button class="wa" onclick="window.__aclWA(${JSON.stringify('Assalam o Alaikum, mujhe '+x[0]+' chahiye. Specs: '+x[1]+' '+x[2]+', '+x[3]+', '+x[4]+'. Available Qty: '+x[5])})">💬 WhatsApp Order</button><button class="ep" onclick="window.__aclWA(${JSON.stringify('Assalam o Alaikum, main '+x[0]+' ke liye Easypaisa payment karna chahta hoon. Account Name: '+EPN+'. Number: '+EP+'. Transaction ID: ')})">💳 Easypaisa</button></div></div></article>`).join('');}
+const wa=t=>{const url='https://wa.me/'+WA+'?text='+encodeURIComponent(t);window.location.href=url};
+function render(){const grid=document.getElementById('laptopGrid');if(!grid)return;const q=(document.getElementById('search')?.value||'').toLowerCase();const active=window.__aclBrand||'All';const arr=stock.filter(x=>(active==='All'||x[0].toUpperCase().includes(active.toUpperCase())||x[1].toLowerCase().includes(active.toLowerCase())||x[2].toLowerCase().includes(active.toLowerCase()))&&(!q||x.join(' ').toLowerCase().includes(q)));grid.innerHTML=arr.map(x=>`<article class="card"><div class="pic"><img src="${x[6]}" alt="${x[0]}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<span style="font-size:52px">💻</span>'></div><div class="info"><div class="name">${x[0]}</div><div class="spec">Processor: <b>${x[1]}</b> • Gen: <b>${x[2]}</b> • Memory: <b>${x[3]}</b> • Storage: <b>${x[4]}</b></div><div class="price">Contact for Price</div><div class="stock">Available Quantity: ${x[5]}</div><div class="buttons"><button type="button" class="wa" onclick="window.__aclWA(${JSON.stringify('Assalam o Alaikum, mujhe '+x[0]+' chahiye. Specs: '+x[1]+' '+x[2]+', '+x[3]+', '+x[4]+'. Available Qty: '+x[5])})">💬 WhatsApp Order</button></div></div></article>`).join('')}
 window.__aclWA=wa;window.__aclBrand='All';window.__aclStock=stock;window.setBrand=(b,el)=>{window.__aclBrand=b;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');render()};window.renderLaptops=render;
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
 })();
