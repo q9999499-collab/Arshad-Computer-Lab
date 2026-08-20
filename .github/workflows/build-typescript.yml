@@ -9,39 +9,35 @@ on:
       - 'package.json'
       - '.github/workflows/build-typescript.yml'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
-
       - name: Install dependencies
         run: npm install
-
       - name: Compile TypeScript
         run: npm run build
-
       - name: Publish compiled JavaScript files
         run: |
           cp dist/app.js app.js
+          cp dist/dom-utils.js dom-utils.js
+          cp dist/ui-types.js ui-types.js
+          cp dist/whatsapp.js whatsapp.js
+          cp dist/product-catalog.js product-catalog.js
           cp dist/creative-stock.js creative-stock.js 2>/dev/null || true
           cp dist/arshadpc.js arshadpc.js 2>/dev/null || true
-          cp dist/product-catalog.js product-catalog.js
-
       - name: Commit compiled JavaScript
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app.js creative-stock.js arshadpc.js product-catalog.js
-          git diff --cached --quiet || git commit -m "Publish compiled TypeScript product app"
+          git add app.js dom-utils.js ui-types.js whatsapp.js product-catalog.js creative-stock.js arshadpc.js
+          git diff --cached --quiet || git commit -m "Publish browser-ready TypeScript modules"
           git push
